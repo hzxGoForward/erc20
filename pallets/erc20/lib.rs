@@ -96,7 +96,7 @@ decl_module!{
         #[weight = 0]
         fn approve(_origin, spender: T::AccountId, value: T::TokenBalance) -> Result {
             let sender = ensure_signed(_origin)?
-            
+
             let allowance = Self::allowance((token_id, sender.clone(), spender.clone()));
             let updated_allowance = allowance.checked_add(&value).ok_or("overflow in calculating allowance")?;
             <Allowance<T>>::insert((token_id, sender.clone(), spender.clone()), updated_allowance);
@@ -136,4 +136,3 @@ impl<T: Trait> Module<T> {
         Ok(())
     }
 }
-
