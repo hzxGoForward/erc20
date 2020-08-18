@@ -9,7 +9,7 @@ version = '2.0.0-rc5'
 
 [[bin]]
 name = "erc20"
-path = "src/lib.rs"
+path = "src\lib.rs"
 
 [dependencies.codec]
 default-features = false
