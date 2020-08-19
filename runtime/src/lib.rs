@@ -263,9 +263,9 @@ impl template::Trait for Runtime {
 	type Event = Event;
 }
 
-impl template::Trait for Runtime {
-    type Event = Event;
-    type TokenBalance = u64;
+impl erc20::Trait for Runtime {
+	type Event = Event;
+	type TokenBalance = u64;
 }
 
 // Create the runtime by composing the FRAME pallets that were previously configured.

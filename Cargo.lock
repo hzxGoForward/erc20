@@ -3230,7 +3230,6 @@ dependencies = [
  "sp-core",
  "sp-io",
  "sp-runtime",
- "sp-std 2.0.0-rc5",
 ]
 
 [[package]]
